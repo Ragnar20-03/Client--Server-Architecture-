@@ -17,6 +17,19 @@ class Client
 
         BufferedReader br2 = new BufferedReader(new InputStreamReader(System.in));
 
+        System.out.println("Chat messanger Started");
+        System.out.println("Enter Message for Server : ");
+
         String str1,str2;
+
+        while(!(str1 = br2.readLine().equals("end")))
+        {
+            ps.println(str1);
+            System.out.println("Enter Message for Server : ");
+            str2 = br1.readLine();
+            System.out.println("Server says : "+str2);
+        }
+        
+        System.out.println("Thank you for using chat messanger..");
     }
 }
